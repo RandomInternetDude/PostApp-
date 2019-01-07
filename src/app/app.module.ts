@@ -4,17 +4,17 @@ import { MatInputModule, MatCardModule, MatButtonModule,
 MatToolbarModule, MatExpansionModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { PostCreateComponent } from './post-create/post-create.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PostListComponent } from './post-list/post-list.component';
+import { PostListModule } from './posts/post-list/post-list.module';
+import { PostCreateComponent } from './posts/post-create/post-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostCreateComponent,
     HeaderComponent,
-    PostListComponent
+    PostCreateComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -24,7 +24,9 @@ import { PostListComponent } from './post-list/post-list.component';
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    PostListModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
