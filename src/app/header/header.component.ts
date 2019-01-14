@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+companyName = "PostApp";
+dropdown: boolean;
 
-  constructor() { }
+
+
+constructor() { }
 
   ngOnInit() {
   }
 
+  openDropDown(){
+    this.dropdown = !this.dropdown
+  }
 }

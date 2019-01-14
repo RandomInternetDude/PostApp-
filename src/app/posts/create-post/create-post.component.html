@@ -1,0 +1,30 @@
+<div class="container" style="padding-top: 20px; padding-bottom:20px;">
+        <h2 class="label" style="padding: 20px 20px 20px 20px">CreatePost</h2>
+            <form class="col-lg-6" [(ngModel)]="model.CPform" style="align-content: center">
+                    <div class="form-group">
+                      <label for="title">{{meta.title}}</label>
+                      <input type="text" class="form-control" ngRequired [(ngModel)]="model.title" >
+                      <small class="form-text text-muted">What's biting your tounge?</small>
+                    </div>
+                    <div class="form-group">
+                            <label>{{meta.file}}</label>
+                            <input type="file" class="form-control-file" [(ngModel)]="model.file" id="exampleFormControlFile1">
+                    </div>
+                    <div class="form-group">
+                            <label for="catagory">{{meta.catagory}}</label>
+                            <select class="form-control"  [(ngModel)]="model.catagory" >
+                              <option>Hacking</option>
+                              <option>OOP</option>
+                              <option>CSS</option>
+                              <option>Frameworks</option>
+                              <option>API's</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="body">{{meta.body}}</label>
+                      <textarea class="form-control" name="body" ngRequired [(ngModel)]="model.body" cols="30" rows="10" placeholder="Once upon a time..."></textarea>
+                    </div>
+                    <button type="submit" (click)="logForm()" class="btn btn-outline-primary">Submit</button>
+            </form>
+    </div>
+    
